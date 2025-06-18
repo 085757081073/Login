@@ -3,75 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Go-Cycle</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Go-Cycle Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff !important;
-      font-family: 'Poppins', sans-serif;
-      height: 100%;
-    }
-
     body {
+      margin: 0;
+      background: #ffffff;
+      font-family: 'Poppins', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100vh;
+      color: #14533f;
       text-align: center;
-      color: #0d3c80;
       padding: 20px;
     }
 
-    img {
-      width: 100px;
-      height: 100px;
+    .logo {
+      width: 110px;
+      height: 110px;
       margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 2.4em;
-      margin: 10px 0;
-      color: #0d3c80;
+      font-size: 2em;
+      margin: 0;
+      color: #0f3d2e;
     }
 
     h2 {
-      font-size: 1.1em;
-      color: #4e8bd7;
-      margin-bottom: 8px;
+      font-size: 1em;
+      font-weight: 400;
+      color: #3a3a3a;
+      margin: 8px 0 20px;
     }
 
-    p {
-      font-size: 0.95em;
-      color: #555555;
-      max-width: 320px;
-      margin-bottom: 30px;
-    }
-
-    button {
-      background-color: #1a73e8;
-      color: white;
+    .btn {
+      background: #14533f;
+      color: #ffffff;
       border: none;
       padding: 12px 24px;
       font-size: 1em;
       border-radius: 8px;
-      font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+      margin-bottom: 20px;
     }
 
-    button:hover {
-      background-color: #125fcc;
+    .btn:hover {
+      background: #0f3d2e;
+    }
+
+    .desc {
+      font-size: 0.95em;
+      color: #444;
+      max-width: 500px;
     }
   </style>
 </head>
 <body>
-  <img src="https://cdn-icons-png.flaticon.com/128/7890/7890227.png" alt="Icon Bentor">
+
+  <img src="https://cdn-icons-png.flaticon.com/128/7890/7890227.png" class="logo" alt="Icon Bentor">
   <h1>Go-Cycle</h1>
-  <h2>Gorontalo Motorcycle</h2>
-  <p>Bangga deng produk sandiri. Solusi transportasi lokal cepat, hemat, dan terpercaya.</p>
-  <button onclick="location.href='screen:login'">Masuk Aplikasi</button>
+  <h2>Bangga deng produk sandiri</h2>
+
+  <button class="btn" onclick="masuk()">Masuk Aplikasi</button>
+
+  <div class="desc">
+    Go-Cycle adalah aplikasi transportasi lokal dari Gorontalo yang memudahkan kamu memesan kendaraan bentor dengan cepat, aman, dan nyaman. Aplikasi ini dirancang khusus untuk masyarakat Gorontalo agar bisa menikmati layanan transportasi digital tanpa ribet.
+  </div>
+
+  <script>
+    function masuk() {
+      window.AppInventor.setWebViewString("MASUK");
+    }
+  </script>
 </body>
 </html>
